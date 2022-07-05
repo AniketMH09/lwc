@@ -1,0 +1,23 @@
+<template>
+    <div class="page-title">
+        <h2 class="ahfc-header-three title-padding managepayment-title"> 
+          <template if:true={showIcon}>
+        <a href="javascript:void(0);" onclick={showPageNavigationPopup} tabindex="0">
+          <lightning-icon         
+            class="ahfc-icon-red icon-space"
+            icon-name="utility:back"
+            size="small"
+            alternative-text="Return to previous page"
+            title="back"
+            
+          >     
+          </lightning-icon>
+          </a>
+      </template>
+         <span>{title}</span>
+        </h2>     
+    </div>
+    <template if:true={showPopUpNotificationOnChange}>
+      <c-a-h-f-c_page-navigation-notification onaccept={acceptNavigation} oncancel={cancelNavigation}></c-a-h-f-c_page-navigation-notification>
+   </template>
+</template>

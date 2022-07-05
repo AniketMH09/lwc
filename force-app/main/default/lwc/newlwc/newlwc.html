@@ -1,0 +1,138 @@
+<template>
+    <div class="main-layout slds-card">
+        <div class="logn-main">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_1-of-12">
+                    <img src="https://www.salesforce.com/content/dam/sfdc-docs/www/logos/logo-salesforce.svg"
+                        width="auto" height="auto" class="slds-text-heading_large" />
+                </div>
+                <div class="slds-col slds-size_11-of-12">
+                    <div class="eleven">
+                        <h1>SALESFORCE TRIVIA</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_2-of-3">
+                    <div class="col-table-border slds-p-around_medium">
+                        <div if:true={initialPage} class="slds-align_absolute-center">
+                            <button class="button-71" role="button" onclick={startGame}>START THE GAME</button>
+                        </div>
+                        <div if:true={secondpage}>
+                            <div class="eleven">
+                                <h1>New Game Starting Soon...</h1>
+                            </div>
+                            <div>
+                                <div class="title-class">INSTRUCTIONS</div>
+                                <div>
+                                    <ul>
+                                        <li>Rucksack</li>
+                                        <li>Compass</li>
+                                        <li>Map</li>
+                                        <li>Water Bottle</li>
+                                        <li>Jacket</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="btn-rght-crn slds-p-around_medium">
+                                <button class="slds-button slds-button_brand" onclick={onshowquestion}>GO TO
+                                    QUESTIONS</button>
+                            </div>
+                        </div>
+                        <div if:true={shoquestions}>
+                            <div>
+                                <h6>1. An HTML document can contain _____</h6>
+                                <div class="view-optn-cls" onclick={onViewOption}>View Options</div>
+                                <div if:true={isViewOption}>
+                                    <p>
+                                        <span class="label label-info">A.</span>
+                                        Attributes
+                                    </p>
+                                    <p>
+                                        <span class="label label-info">B.</span>
+                                        Attributes
+                                    </p>
+                                    <p>
+                                        <span class="label label-info">C.</span>
+                                        Attributes
+                                    </p>
+                                    <p>
+                                        <span class="label label-info">D.</span>
+                                        Attributes
+                                    </p>
+                                </div>
+                                <div class="btn-rght-crn slds-p-around_medium">
+                                    <button class="slds-button slds-button_brand" onclick={onNextQuestion}>Next Question</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <div class="col-table-border slds-p-around_medium">
+                        <div class="main-table">
+                            <div class="eleven">
+                                <h1>Game Id: 123456</h1>
+                            </div>
+                            <div>
+                                <div class="scr-brd">Score Board</div>
+                                <table
+                                    class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered"
+                                    aria-label="Example table of Opportunities with vertical borders">
+                                    <thead>
+                                        <tr class="slds-line-height_reset">
+                                            <th class="" scope="col">
+                                                <div class="slds-truncate" title="Opportunity Name">NAME</div>
+                                            </th>
+                                            <th class="" scope="col">
+                                                <div class="slds-truncate" title="Account Name">SCORE</div>
+                                            </th>
+                                            <th class="" scope="col">
+                                                <div class="slds-truncate" title="Account Name">TIME</div>
+                                            </th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="slds-hint-parent">
+                                            <td data-label="Opportunity Name" scope="row">
+                                                <div class="slds-truncate">
+                                                    ANIKET
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">12</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">500</div>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="slds-hint-parent">
+                                            <td data-label="Opportunity Name" scope="row">
+                                                <div class="slds-truncate">
+                                                    ANIKET
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">12</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-truncate">500</div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-contain">
+
+        </div>
+    </div>
+</template>

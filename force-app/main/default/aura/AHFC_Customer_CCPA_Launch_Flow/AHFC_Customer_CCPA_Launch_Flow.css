@@ -1,0 +1,3 @@
+.THIS.slds-spinner_container { display: none !important; }
+
+.THIS.slds-spinner_brand.slds-spinner:before{ background-color: #CC0000 !important; }
